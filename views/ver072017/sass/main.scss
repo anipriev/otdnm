@@ -1,0 +1,12 @@
+@import 'color';
+$font: 14px Arial, sans-serif;
+
+html {
+    min-height: 100%;
+    position: relative;
+    font: $font;
+}
+body {
+    color: $body_color;
+    margin: 0;
+}

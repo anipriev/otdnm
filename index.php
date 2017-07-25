@@ -2,10 +2,10 @@
 
 // запрет прямого обращения
 
-define('OTDYHNAMORE', TRUE);
+define('OTDNM', TRUE);
 
 //Подключение файла конфигурации
 require_once 'config.php';
 
 // Подключение контроллера
-require_once CONTROLLER;
+require_once 'controllers/main_controller';

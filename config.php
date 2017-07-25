@@ -1,16 +1,16 @@
 <?php
 
 // Запрет прямого обращения к файлу
-defined ('OTDYHNAMORE') or die ('Access denied');
+defined ('OTDNM') or die ('Access denied');
 
 // Домен
-define ('PATH','http://otdnk.ru');
+define ('PATH','http://otdnm.ru');
 
 //Модель
-define ('MODEL','model/model.php');
+//define ('MODEL','models/model.php');
 
 //Контроллер
-define ('CONTROLLER','controller/controller.php');
+//define ('CONTROLLER','controllers/controller.php');
 
 //Папка с картинками
 define ('USERFILES',PATH.'/userfiles/');
@@ -19,10 +19,10 @@ define ('USERFILES',PATH.'/userfiles/');
 define ('VIEW','views/');
 
 // Активный шаблон
-define ('TEMPLATE',VIEW.'otdyhnamore/');
+define ('TEMPLATE',VIEW.'ver072017/');
 
 //Максимальный размер картинки
-define('SIZE', 1048576);
+define('IMGSIZE', 1048576);
 
 // Сервер БД
 define ('HOST','localhost');
@@ -34,16 +34,16 @@ define ('USER','host1344758');
 define ('PASS','2751130');
 
 // БД
-define ('DB','host1344758_onk2');
+define ('DB','otdnm');
 
 // Название магазина - title
 //define ('TITLE','Сельхозтехника');
 
 //Папка шаблона админки
-define ('ADMIN_TEMPLATE','views/admin/');
+//define ('ADMIN_TEMPLATE','views/admin/');
 
 //Папка административной части
-define ('ADMIN','manager/');
+//define ('ADMIN','manager/');
 
 mysql_connect (HOST, USER, PASS) or die ('No connect to Server');
 mysql_select_db(DB) or die ('No connect to DB');
