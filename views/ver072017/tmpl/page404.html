@@ -1,0 +1,56 @@
+<style>
+h1 {
+    color: #FF0101;
+}
+a {
+    font-size: 20px;
+    color: #64CA04;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+    color: #1202A2;
+}
+.error {
+    text-align: center;
+}
+</style>
+
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <!--<meta http-equiv="Refresh" content="5; URL=http://otdnk.ru"/>-->
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <title>Отдыхаем на кубани.ру - ошибка</title>    	
+        <link href="/favicon.ico" rel="shortcut icon" />
+        <link href="/favicon.ico" rel="icon" type="image/x-icon" />
+        <script language="JavaScript" type="text/javascript">
+        
+        // выставляем секунды
+        var sec=6;
+        // выставляем минуты
+        var min=0;
+        
+        function refresh()
+        {
+          sec--;
+          
+          if(document.getElementById){timer.innerHTML=sec;}
+          inter=setTimeout("refresh()", 1000);
+          // действие, если таймер 00:00
+          // в данном случае переход на страницу http://www.net-f.ru/
+          if(sec=='0'){clearInterval(inter); window.location='http://otdnm';}
+        }
+       
+        </script>
+    </head>
+    <body OnLoad="refresh();">
+        <div class="error">
+            <h1>Страница не существует!!!!</h1>
+            <h3>Вы будете перенаправлены на главную страницу через <span id="timer"></span> секунд</h3>
+            <a href="http://otdnk.ru">Перейти на главную! &raquo;&raquo;&raquo;</a>
+        </div>
+    </body>
+</html>

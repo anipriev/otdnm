@@ -7,6 +7,12 @@ html {
     font: $font;
 }
 body {
-    color: $body_color;
+    color: $font_color;
     margin: 0;
+    background-color: $body_bg_color;
 }
+.header {
+    background-color: $header_bg_color;
+    border-bottom: 1px solid $border_color;
+}
+

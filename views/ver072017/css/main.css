@@ -4,7 +4,12 @@ html {
   font: 14px Arial, sans-serif; }
 
 body {
-  color: #ffffff;
-  margin: 0; }
+  color: #ffce1a;
+  margin: 0;
+  background-color: #5145b7; }
+
+.header {
+  background-color: #322a79;
+  border-bottom: 1px solid #ffce1a; }
 
 /*# sourceMappingURL=main.css.map */
