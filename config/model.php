@@ -76,3 +76,45 @@ function populars(){
 
 	return $populars;
 }
+
+/* Функция получения каталога мест расположения (Страна - регион - курорт - горд)*/
+
+function catalog(){
+    $query = "SELECT * FROM places WHERE level >= 3 ORDER BY position";
+    $res = mysql_query($query) or die(mysql_query());
+    
+	$catalog = array();
+	while($row = mysql_fetch_assoc($res)){
+            $catalog[$row['id']] = $row;
+	}
+	return $catalog;
+}
+
+//Функция построения дерева из массива от Tommy Lacroix
+function catalog_tree($catalog) {
+	$tree = array();
+	foreach ($catalog as $id=>&$node) {    
+		//Если нет вложений
+        //print_arr($node);
+		if (!$node['parent_id']){
+			$tree[$id] = &$node;
+		}else{ 
+			//Если есть потомки то перебераем массив
+            $catalog[$node['parent_id']]['childs'][$id] = &$node;
+		}        
+	}
+	return $tree;
+}
+function menu($tree) {
+    if ($tree){
+        foreach ($tree as $menu){
+            if($menu["name"]) echo '<li><a href="catalog/'.$menu["id"].'">'.$menu["name"].'</a>';
+            if($menu['childs']){                
+                echo '<ul class="submenu">';
+                menu($menu['childs']);
+                echo '</ul>';
+            }
+            echo '</li>';                        
+        }
+    }
+}
